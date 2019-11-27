@@ -18,6 +18,9 @@ function RemoteConfig({navigation}: Props) {
   // Whether we can show our feature
   const [showFeatures, setShowFeatures] = React.useState<boolean>(false);
 
+  /**
+   * Check Remote Config values & update local state
+   */
   async function bootstrap(): Promise<void> {
     // Enable developer mode
     await remoteConfig().setConfigSettings({

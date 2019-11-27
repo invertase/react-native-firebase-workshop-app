@@ -33,27 +33,24 @@ function FirestoreScreen() {
    * On any changes, update local state with the data!
    */
   React.useEffect(() => {
-    return (
-      firestore()
-        .collection('movies')
-        // .orderBy('year')
-        .orderBy('score', 'desc')
-        // .where('year', '>=', 2000)
-        .onSnapshot(query => {
-          const items: MovieProps[] = [];
+    return firestore()
+      .collection('movies')
+      .orderBy('year')
+      .orderBy('score', 'desc')
+      .where('year', '>=', 2000)
+      .onSnapshot(query => {
+        const items: MovieProps[] = [];
 
-          // @ts-ignore - TODO fix me on RNFB
-          query.forEach(document => {
-            items.push({
-              ...document.data(),
-              key: document.id,
-            } as MovieProps);
-          });
+        query.forEach(document => {
+          items.push({
+            ...document.data(),
+            key: document.id,
+          } as MovieProps);
+        });
 
-          setMovies(items);
-          setLoading(false);
-        }, console.error)
-    );
+        setMovies(items);
+        setLoading(false);
+      }, console.error);
   }, []);
 
   /**

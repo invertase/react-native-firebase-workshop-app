@@ -344,7 +344,7 @@ DEPENDENCIES:
   - yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - AppAuth
     - boost-for-react-native
     - BoringSSL-GRPC
@@ -525,6 +525,6 @@ SPEC CHECKSUMS:
   RNVectorIcons: 0bb4def82230be1333ddaeee9fcba45f0b288ed4
   yoga: 312528f5bbbba37b4dcea5ef00e8b4033fdd9411
 
-PODFILE CHECKSUM: 8637f3bf443b5b729389fdd040b5fc32c0003972
+PODFILE CHECKSUM: 0137ea3c4742138ae8c94b6d8162cb4e6ff1d58a
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4
