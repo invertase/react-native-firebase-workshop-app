@@ -38,8 +38,9 @@ function FirestoreScreen() {
         .collection('movies')
         .orderBy('year')
         .orderBy('score', 'desc')
-        // .where('genre', 'in', ['Sci-Fi', 'Fantasy'])
-        // .where('year', '>=', 2000)
+        // .where('title', 'in', ['Joker', 'The Dark Knight'])
+        // .where('genre', 'array-contains-any', ['Sci-Fi', 'Fantasy'])
+        .where('year', '>=', 2003)
         .onSnapshot(query => {
           const items: MovieProps[] = [];
 
