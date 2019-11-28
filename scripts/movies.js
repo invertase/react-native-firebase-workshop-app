@@ -27,7 +27,7 @@ Promise.all(
         rated: movie.Rated,
         released: movie.Released,
         runtime: movie.Runtime,
-        genre: movie.Genre,
+        genre: movie.Genre.split(','),
         director: movie.Director,
         poster: movie.Poster,
         score: Number(movie.Metascore),

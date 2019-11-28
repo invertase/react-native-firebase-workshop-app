@@ -65,7 +65,7 @@ function Auth() {
  * Create User Account Flow
  */
 function CreateAccount() {
-  const [email] = React.useState<string>('elliot@amsterdam.com');
+  const [email] = React.useState<string>('mike@invertase.co.uk');
   const [password] = React.useState<string>('123456');
   const [error, setError] = React.useState<string>('');
 
@@ -110,7 +110,7 @@ function CreateAccount() {
  * Sign In Flow
  */
 function SignIn() {
-  const [email] = React.useState<string>('elliot@amsterdam.com');
+  const [email] = React.useState<string>('mike@invertase.co.uk');
   const [password] = React.useState<string>('123456');
   const [error, setError] = React.useState<string>('');
 

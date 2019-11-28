@@ -82,7 +82,7 @@ function Storage() {
 
     Alert.alert(
       'Photo uploaded!',
-      'Your photo has been upload to Firebase Cloud Storage!',
+      'Your photo has been uploaded to Firebase Cloud Storage!',
     );
   }
 
@@ -115,6 +115,9 @@ function Storage() {
 
   return (
     <ScrollView>
+      <View style={{padding: 5}}>
+        <Text style={{fontSize: 20}}>Select an image to upload:</Text>
+      </View>
       {photos.map(photo => (
         <TouchableHighlight key={photo} onPress={() => showAlert(photo)}>
           <Image source={{uri: photo}} style={styles.photo} />

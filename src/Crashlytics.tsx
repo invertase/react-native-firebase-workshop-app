@@ -11,7 +11,7 @@ function Crashlytics() {
         mode="contained"
         onPress={() => {
           crashlytics().log('Crashing...!');
-          crashlytics().setAttribute('Where', 'Amsterdam');
+          crashlytics().setAttribute('Where', 'London');
           crashlytics().crash();
         }}>
         Crash the app!

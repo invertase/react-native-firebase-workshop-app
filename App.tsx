@@ -28,7 +28,7 @@ function App() {
           }}>
           <Stack.Screen
             name="Home"
-            options={{title: 'React Native Amsterdam'}}
+            options={{title: 'React Native London'}}
             component={HomeScreen}
           />
           <Stack.Screen
