@@ -14,7 +14,7 @@ import firestore from '@react-native-firebase/firestore';
 interface MovieProps {
   key: string; // Firestore ID
   director: string;
-  genre: string;
+  genre: string[];
   poster: string;
   rated: string;
   released: string;
@@ -36,11 +36,12 @@ function FirestoreScreen() {
     return (
       firestore()
         .collection('movies')
-        .orderBy('year')
-        .orderBy('score', 'desc')
-        // .where('title', 'in', ['Joker', 'The Dark Knight'])
-        // .where('genre', 'array-contains-any', ['Sci-Fi', 'Fantasy'])
-        .where('year', '>=', 2003)
+        // .orderBy('year')
+        // .orderBy('score', 'desc')
+        // .where('year', '>=', 2000)
+        // .limit(2)
+        // .where('title', 'in', ['The Dark Knight', 'Inception', 'Joker'])
+        // .where('genre', 'array-contains-any', ['Fantasy', 'Adventure'])
         .onSnapshot(query => {
           const items: MovieProps[] = [];
 
@@ -93,7 +94,7 @@ function Movie({
         <Divider />
         <Text style={styles.info}>Rated: {rated}</Text>
         <Divider />
-        <Text style={styles.info}>Genre: {genre}</Text>
+        <Text style={styles.info}>Genre: {genre.join(', ')}</Text>
         <Divider />
         <Text style={styles.info}>Released: {year}</Text>
         <Divider />
